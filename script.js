@@ -30,12 +30,7 @@ const postButton = document.querySelector('div.post-button')
 
 const carouselContainer = document.querySelector('main')
 
-
-
-
-
 images.forEach( element => {
-
     
     let carouselElement = document.createElement('div')
 
@@ -62,21 +57,40 @@ let carouselElements = document.querySelectorAll('div.carouselItem')
 carouselElements[activeIndex].classList.add('active')
 
 
-
 postButton.addEventListener('click', function(){
     
+    let activeItem = document.querySelector('div.carouselItem.active')
     
-    if(activeIndex == (images.length-1)){
-        
-        carouselElements[activeIndex].classList.remove('active')
+    if(activeIndex == (images.length - 1)){
         
         activeIndex = 0
+    }else{
+
+        activeIndex += 1
     }
 
-    carouselElements[activeIndex].classList.remove('active')
-
-    activeIndex += 1
-
+    activeItem.classList.remove('active')
+    
     carouselElements[activeIndex].classList.add('active')
 
+    
+})
+
+previousButton.addEventListener('click', function(){
+    
+    let activeItem = document.querySelector('div.carouselItem.active')
+    
+    if(activeIndex == 0){
+        
+        activeIndex = images.length - 1
+    }else{
+
+        activeIndex -= 1
+    }
+
+    activeItem.classList.remove('active')
+    
+    carouselElements[activeIndex].classList.add('active')
+
+    
 })
