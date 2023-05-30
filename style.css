@@ -13,19 +13,20 @@ main{
     text-align: center;
     max-width: 1100px;
     margin: 5rem auto;
-    padding: 2rem 0rem;
     text-align: center;
+    height: 800px;
+    display: flex;
 }
 
 .pre-button, .post-button{
     position: absolute;
-    left: 50%;
+    top: 50%;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: aqua;
     display: flex;
-    transform: translateX(-50%)
+    transform: translatey(-50%)
 }
 
 div.carousel .carouselItem{
@@ -43,10 +44,10 @@ div.pre-button:hover, div.post-button:hover{
 }
 
 .pre-button{
-    top: .5rem;
+    left: .5rem;
 }
 .post-button{
-    bottom: .5rem;
+    right: .5rem;
 }
 
 div.carousel{
