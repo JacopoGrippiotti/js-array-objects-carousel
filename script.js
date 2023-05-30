@@ -26,24 +26,48 @@ const carousel = document.querySelector('div.carousel')
 
 const previousButton = document.querySelector('div.pre-button')
 
-previousButton.addEventListener('click', function(){
+const carouselContainer = document.querySelector('main')
+
+
+
+
+
+images.forEach( element => {
+
     
-})
+    let carouselElement = document.createElement('div')
+
+    carouselElement.classList.add('carouselItem')
+
+    carouselElement.innerHTML += 
+    
+    `
+       <img src="${element.image}" alt="">
+     
+    `
+
+    carousel.append(carouselElement) 
+
+    }
+      
+);
 
 let activeIndex = 0
 
-images.forEach((element,index) => {
+let carouselElements = document.querySelectorAll('div.carouselItem')
 
-    if(index == activeIndex){
+carouselElements[activeIndex].classList.add('active')
 
-        carousel.innerHTML += 
-    ` <div class="carouselItem">
-        <img src="${images[index].image}" alt="">
-      </div>
-    `
+previousButton.addEventListener('click', function(){
+    
+    activeIndex -= 1
+    
+    if(activeIndex == 0){
 
+        activeIndex = (images.length - 1)
     }
-    
-    
-    
-});
+
+    images[activeIndex + 1].image.classList.remove('active')
+    images[activeIndex].image.classList.add('active')
+
+})

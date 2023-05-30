@@ -16,6 +16,11 @@ main{
     text-align: center;
     height: 800px;
     display: flex;
+    flex-wrap: wrap;
+}
+
+main p{
+    width: 100%;
 }
 
 .pre-button, .post-button{
@@ -31,8 +36,12 @@ main{
 
 div.carousel .carouselItem{
     height: 100%;
+    display: none;
 }
 
+div.carouselItem.active{
+    display: flex;
+}
 
 div.pre-button:hover, div.post-button:hover{
     background-color: lightgray;
@@ -49,9 +58,6 @@ div.pre-button:hover, div.post-button:hover{
     right: .5rem;
 }
 
-.active{
-    display: block;
-}
 div.carousel{
     position: relative;
     height: 700px;
@@ -64,5 +70,4 @@ main img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
