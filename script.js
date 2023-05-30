@@ -53,7 +53,7 @@ let activeIndex = 0
 
 let carouselElements = document.querySelectorAll('div.carouselItem')
 
-
+let carouselElement = document.querySelector('div.carouselItem')
 carouselElements[activeIndex].classList.add('active')
 
 

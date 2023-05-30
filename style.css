@@ -6,12 +6,12 @@
 
 body{
 
-    background-color: aquamarine;
+    background-color: rgb(30, 4, 4);
 }
 main{
     background-color: white;
     text-align: center;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 5rem auto;
     text-align: center;
     height: 1000px;
@@ -29,7 +29,7 @@ main p{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: white;
     display: flex;
     transform: translatey(-50%)
 }
@@ -38,6 +38,7 @@ div.carousel .carouselItem{
     height: 100%;
     width: 100%;
     display: none;
+    
 }
 
 div.carouselItem.active{
@@ -63,7 +64,6 @@ div.carousel{
     position: relative;
     height: 800px;
     width: 100%;
-    background-color: red;
     margin: auto;
 }
 
@@ -71,6 +71,4 @@ div.carousel{
 main img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    
 }
