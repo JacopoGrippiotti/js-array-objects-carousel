@@ -23,3 +23,7 @@ const images = [
 ];
 
 const carousel = document.querySelector(div.carousel)
+
+images.forEach(image => {
+    carousel.innerHTML += `<div`
+});
