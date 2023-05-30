@@ -50,6 +50,9 @@ div.pre-button:hover, div.post-button:hover{
     right: .5rem;
 }
 
+.active{
+    display: block;
+}
 div.carousel{
     position: relative;
     height: 700px;

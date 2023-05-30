@@ -24,12 +24,21 @@ const images = [
 
 const carousel = document.querySelector('div.carousel')
 
-let aactiveItem = 3
+const previousButton = document.querySelector('div.pre-button')
 
-images.forEach(image => {
+previousButton.addEventListener('click', function(){
+    
+})
+
+let activeIndex = 0
+
+images.forEach(image,activeIndex => {
+
+    image[activeIndex]
     carousel.innerHTML += 
     ` <div class="carouselItem">
-        <img src="${image.image}" alt="">
+        <img src="${image[activeIndex].image}" alt="">
       </div>
     `
+    
 });
