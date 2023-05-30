@@ -32,13 +32,18 @@ previousButton.addEventListener('click', function(){
 
 let activeIndex = 0
 
-images.forEach(image,activeIndex => {
+images.forEach((element,index) => {
 
-    image[activeIndex]
-    carousel.innerHTML += 
+    if(index == activeIndex){
+
+        carousel.innerHTML += 
     ` <div class="carouselItem">
-        <img src="${image[activeIndex].image}" alt="">
+        <img src="${images[index].image}" alt="">
       </div>
     `
+
+    }
+    
+    
     
 });
