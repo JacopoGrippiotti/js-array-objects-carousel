@@ -26,6 +26,8 @@ const carousel = document.querySelector('div.carousel')
 
 const previousButton = document.querySelector('div.pre-button')
 
+const postButton = document.querySelector('div.post-button')
+
 const carouselContainer = document.querySelector('main')
 
 
@@ -56,18 +58,25 @@ let activeIndex = 0
 
 let carouselElements = document.querySelectorAll('div.carouselItem')
 
+
 carouselElements[activeIndex].classList.add('active')
 
-previousButton.addEventListener('click', function(){
-    
-    activeIndex -= 1
-    
-    if(activeIndex == 0){
 
-        activeIndex = (images.length - 1)
+
+postButton.addEventListener('click', function(){
+    
+    
+    if(activeIndex == (images.length-1)){
+        
+        carouselElements[activeIndex].classList.remove('active')
+        
+        activeIndex = 0
     }
 
-    images[activeIndex + 1].image.classList.remove('active')
-    images[activeIndex].image.classList.add('active')
+    carouselElements[activeIndex].classList.remove('active')
+
+    activeIndex += 1
+
+    carouselElements[activeIndex].classList.add('active')
 
 })
